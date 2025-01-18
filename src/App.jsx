@@ -15,6 +15,11 @@ export default function App(){
   const mudarCor = () => {
     setcor("yellow")
   }
+  const [like, setLike] = useState(0)
+
+  const curtida = () => {
+    setLike(like + 1)
+  }
 
   return(
     <>
@@ -26,6 +31,10 @@ export default function App(){
     </div>
     <button onClick={mudarCor}>Mudar Cor</button>
 
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTd9Dr9VVgul03iSePNOPK3VWFouxOA4bu4Qw&s" alt="" />
+    <h2>{like}</h2>
+    <button onClick={curtida}>Like</button>
     </>
+ 
   )
 }
